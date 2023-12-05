@@ -1,4 +1,4 @@
-Projenin Bileşenleri,<br>
+<h4>Projenin Bileşenleri</h4>,<br>
 -N katmanlı mimari
 -Repository Design Pattern
 -Dependency Injection 
@@ -10,7 +10,7 @@ Projenin Bileşenleri,<br>
 4 günlük kısa sürede içerisinde öğrendiğim
 tüm bilgilerimi kullanarak minumum araştırmayla yaptığım küçük projem.
 
-Dikkat
+<h6>Dikkat</h6><br>
 Çalıştımak için migration işlemi yapmanız gerekmekedir!
 Register işlemi giriş yapılmadan kullanılmamaktadır Controller tarafından Classı [AllowAnonymous] yaparak kayıt açabilirsiniz.
 
