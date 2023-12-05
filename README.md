@@ -1,13 +1,13 @@
 <h4>Projenin Bileşenleri</h4>,
--N katmanlı mimari
--Repository Design Pattern
--Dependency Injection 
--Entity Framework Core
--FluentValidation
--Identity Core
--Code First (Migration) yaklaşımı
+-N katmanlı mimari<br>
+-Repository Design Pattern<br>
+-Dependency Injection <br>
+-Entity Framework Core<br>
+-FluentValidation<br>
+-Identity Core<br>
+-Code First (Migration) yaklaşımı<br><br>
 
-4 günlük kısa sürede içerisinde öğrendiğim
+4 günlük kısa sürede içerisinde öğrendiğim,<br>
 tüm bilgilerimi kullanarak minumum araştırmayla yaptığım küçük projem.
 
 <h5>Dikkat</h5>
