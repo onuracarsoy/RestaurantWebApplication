@@ -1,0 +1,26 @@
+﻿@model List<EntityLayer.Concrete.Product>
+@{
+    ViewData["Title"] = "All";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@await Component.InvokeAsync("_HAboutEntryPartial")
+@await Component.InvokeAsync("_CategoriesPartial")
+<div id="tm-gallery-page-pizza" class="tm-gallery-page">
+	@foreach (var item in Model)
+	{
+		<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+			<figure>
+				<img src="@item.ProductImage" style="height:225px; width:500px;" alt="Image" class="img-fluid tm-gallery-img" />
+				<figcaption>
+					<h4 class="tm-gallery-title">@item.ProductName</h4>
+					<p class="tm-gallery-description">@item.ProductContent</p>
+					<p class="tm-gallery-price">@item.ProductPrice TL</p>
+				</figcaption>
+			</figure>
+		</article>
+	}
+
+</div>
+<br />
+@await Component.InvokeAsync("_HAboutExistPartial")
+

@@ -1,0 +1,39 @@
+﻿@model List<EntityLayer.Concrete.Category>
+
+
+<div class="tm-paging-links">
+    <nav>
+        <ul>
+            <li class="tm-paging-item">
+                <a href="/Home/All" style="display: inline-block;
+                   padding: 10px 20px;
+                   background-color: darkgreen;
+                   color: #fff;
+                   border: none;
+                   border-radius: 0px;
+                   cursor: pointer;
+                   font-size: 16px;
+                   text-align: center;
+                   text-decoration: none;">Tümü</a>
+            </li>
+            @foreach (var item in Model)
+            {
+          
+                <li class="tm-paging-item">
+                    <a href="/Home/Index/@item.CategoryID" style="display: inline-block;
+                   padding: 10px 20px;
+                   background-color: darkgreen;
+                   color: #fff;
+                   border: none;
+                   border-radius: 0px;
+                   cursor: pointer;
+                   font-size: 16px;
+                   text-align: center;
+                   text-decoration: none;">@item.CategoryName</a>
+                </li>
+                
+            }
+            
+        </ul>
+    </nav>
+</div>

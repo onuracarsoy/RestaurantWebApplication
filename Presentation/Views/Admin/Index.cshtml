@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<div class="container">
+    <br/>
+    <div class="row">
+        <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>@ViewBag.ContactCount</h3>
+
+                    <p>Mesajlar</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h3>@ViewBag.CategoryCount</h3>
+
+                    <p>Kategoriler</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-list"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>@ViewBag.ProductCount</h3>
+
+                    <p>Ürünler</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-coffee"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <!-- ./col -->
+    </div>
+</div>
+

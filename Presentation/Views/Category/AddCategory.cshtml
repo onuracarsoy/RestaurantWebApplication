@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-primary">
+    <!-- /.card-header -->
+    <!-- form start -->
+    @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+    {
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Kategori Adı</label>
+                @*         <input type="text" class="form-control" asp-for="CategoryName" placeholder="Kategori Adı"> *@
+                @Html.TextBoxFor(x=>x.CategoryName,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.CategoryName)</i>
+
+            </div>
+
+        </div>
+
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success">Ekle</button>
+            <a href="/Category/Index" class="btn btn-danger">İptal</a>
+        </div>
+    }
+</div>
+

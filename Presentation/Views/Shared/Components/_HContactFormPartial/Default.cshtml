@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Contact
+
+<div class="col-md-6">
+    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="exampleInputEmail1">Ad</label>
+            @Html.TextBoxFor(x=>x.SenderName,new {@class="form-control"})
+            <i class="text-danger">@Html.ValidationMessageFor(x => x.SenderName)</i>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Mail</label>
+            @Html.TextBoxFor(x=>x.SenderMail,new {@class="form-control"})
+            <i class="text-danger">@Html.ValidationMessageFor(x => x.SenderMail)</i>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Mesajınız</label>
+            @Html.TextAreaFor(x=>x.Message,new {@class="form-control"})
+            <i class="text-danger">@Html.ValidationMessageFor(x => x.Message)</i>
+        </div>
+
+        <div class="form-group tm-d-flex">
+            <button type="submit" class="tm-btn tm-btn-success tm-btn-right">
+                Gönder
+            </button>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,69 @@
+﻿@model List<EntityLayer.Concrete.About>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    <br/>
+    <div class="container">
+        <div class="col-md-13">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">@item.EntryTitle</h3>
+                    <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                   @item.EntryContent
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-13">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title"> @item.Title</h3>
+                    <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    @item.Content
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+        </div>
+    </div>
+
+    <br />
+    <div class="container">
+        <div class="col-md-13">
+            <div class="card card-primary">
+                <div class="card-header">
+
+                    <h3 class="card-title">@item.ExistTitle</h3>
+                    <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <br />
+             <img src="@item.ExistImage" style="height:200px; width:400px; margin-left:10px;" />
+              <br/>
+                
+                <div class="card-body">
+                    @item.ExistContent
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+        </div>
+    </div>
+
+
+}
+

@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "ReceiveContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <br/>
+<div class="col-md-13">
+    <div class="card card-primary card-outline">
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <div class="mailbox-read-info">
+                <h5>Gönderen : @Model.SenderName</h5>
+                <h6>
+                    Mail: @Model.SenderMail
+                    <span class="mailbox-read-time float-right">@Model.Date</span>
+                </h6>
+            </div>
+            <!-- /.mailbox-read-info -->
+            <!-- /.mailbox-controls -->
+            <div class="mailbox-read-message">
+                <p>@Model.Message</p>
+
+     
+
+            </div>
+            <!-- /.mailbox-read-message -->
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer bg-white">
+                
+        </div>
+        <!-- /.card-footer -->
+@*         <div class="card-footer">
+            <button type="button" class="btn btn-success"> Gönder</button>
+        </div> *@
+        <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+</div>
+</div>
+

@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Product
+@{
+    ViewData["Title"] = "DetailsProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+
+            <tr>
+                <th>#</th>
+                <th>Resmi </th>
+                <th>Ürün Adı</th>
+                <th>Açıklama </th>
+                <th>Fiyat </th>
+
+            </tr>
+        </thead>
+        <tbody>
+         
+                <tr>
+                    <td>@Model.ProductID</td>
+                <td><img src="@Model.ProductImage" style="height:100px; width:100px;" /></td>
+                    <td>@Model.ProductName</td>
+                    <td>@Model.ProductContent</td>
+                    <td>@Model.ProductPrice</td> 
+                </tr>
+            
+
+        </tbody>
+    </table>
+</div>
+<a href="/Product/Index" class="btn btn-success"> < Geri </a>
+

@@ -1,0 +1,13 @@
+﻿@model List<EntityLayer.Concrete.ContactAbout>
+@foreach(var item in Model)
+{
+<div class="tm-container-inner-2 tm-map-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="tm-map">
+				<iframe src="@item.GoogleAddress" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+}

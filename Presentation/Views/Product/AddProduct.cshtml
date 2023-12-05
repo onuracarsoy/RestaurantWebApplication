@@ -1,0 +1,65 @@
+﻿@model EntityLayer.Concrete.Product
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-primary">
+    <!-- /.card-header -->
+    <!-- form start -->
+
+       @using (Html.BeginForm("AddProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+       {
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Ürün Adı</label>
+                @Html.TextBoxFor(x=>x.ProductName,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.ProductName)</i>
+
+            </div>
+
+            <div class="form-group">
+
+                <div class="form-group">
+                    <label asp-for="ProductImage"></label>
+                    <input type="file" name="ProductImage" class="form-control" />
+                    
+                    <i class="text-danger">@Html.ValidationMessageFor(x => x.ProductImage)</i>
+         
+                </div>
+            </div>
+            <div class="form-group">
+
+                <label for="exampleInputEmail1">Açıklama</label>
+                @Html.TextAreaFor(x=>x.ProductContent,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.ProductContent)</i>
+            </div>
+
+            <div class="form-group">
+
+                <label for="exampleInputEmail3">Kategorisi</label>
+                @Html.DropDownListFor(x => x.CategoryID, ViewBag.CategoryValues as List<SelectListItem>, "Kategori Seç", new { @class = "form-control" })
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.CategoryID)</i>
+            </div>
+
+            <div class="form-group">
+
+                <label for="exampleInputEmail3">Fiyatı</label>
+                @Html.TextBoxFor(x=>x.ProductPrice,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.ProductPrice)</i>
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success">Ekle</button>
+            <a href="/Product/Index" class="btn btn-danger">İptal</a>
+        </div>
+
+
+    }
+</div>
+
+
+
+

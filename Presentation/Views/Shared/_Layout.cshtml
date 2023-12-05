@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    @await Component.InvokeAsync("_HHeadPartial")
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Top box -->
+        <!-- Logo & Site Name -->
+        @await Component.InvokeAsync("_HNavbarPartial")
+
+        <main>
+    
+
+
+            <!-- Gallery -->
+            @RenderBody()
+
+
+            <!-- Gallery -->
+    
+
+        </main>
+        @await Component.InvokeAsync("_HFooterPartial")
+
+    </div>
+    @await Component.InvokeAsync("_HScriptPartial")
+</body>
+
+</html>

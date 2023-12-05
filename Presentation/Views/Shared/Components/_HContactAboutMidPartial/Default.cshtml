@@ -1,0 +1,23 @@
+﻿@model List<EntityLayer.Concrete.ContactAbout>
+@foreach (var item in Model)
+{
+    <div class="col-md-6">
+        <div class="tm-address-box">
+            <h4 class="tm-info-title tm-text-success">Adres</h4>
+            <address>
+                @item.Address
+            </address>
+            <a href="@item.Phone" class="tm-contact-link">
+                <i class="fas fa-phone tm-contact-icon"></i>@item.Phone
+            </a>
+            <a href="@item.Mail" class="tm-contact-link">
+                <i class="fas fa-envelope tm-contact-icon"></i>@item.Mail
+            </a>
+            <div class="tm-contact-social">
+
+                <a href="@item.SocialMedia1" class="tm-social-link"><i class="fab fa-twitter tm-social-icon"></i></a>
+                <a href="@item.SocialMedia2" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
+            </div>
+        </div>
+    </div>
+}

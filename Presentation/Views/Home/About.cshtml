@@ -1,0 +1,15 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@await Component.InvokeAsync("_HAboutEntryPartial")
+<br/>
+<header class="row tm-welcome-section">
+    <h2 class="col-12 text-center tm-section-title">@Model.Title</h2>
+    <p class="col-12 text-center">@Model.Content</p>
+</header>
+<br/>
+<br/>
+@await Component.InvokeAsync("_HAboutExistPartial")
+

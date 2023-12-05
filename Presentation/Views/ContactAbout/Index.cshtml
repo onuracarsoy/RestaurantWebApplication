@@ -1,0 +1,44 @@
+﻿@model List<EntityLayer.Concrete.ContactAbout>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <br />
+    <div class="container">
+        <div class="col-md-13">
+            <div class="card card-primary">
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <h5>Başlık : </h5>  @item.Title
+                    <br />
+                    <br />
+                    <h5>Açıklama : </h5>  @item.Description
+                    <br />
+                    <br />
+                    <h5>Adres : </h5>  @item.Address
+                    <br />
+                    <br />
+                    <h5>Telefon: </h5>  @item.Phone
+                    <br />
+                    <br />
+                    <h5>Mail : </h5>  @item.Mail
+                    <br />
+                    <br />
+                    <h5>Sosyal Medya 1: </h5>  @item.SocialMedia1
+                    <br />
+                    <br />
+                    <h5>Sosyal Medya 2 : </h5>  @item.SocialMedia2
+                </div><!-- /.card-header -->
+                <!-- /.card-body -->
+            </div>
+
+        </div>
+    </div>
+
+
+}
+

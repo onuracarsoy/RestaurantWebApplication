@@ -1,0 +1,218 @@
+﻿@model List<EntityLayer.Concrete.Category>
+
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <a href="#" class="d-block">Admin Panel</a>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item has-treeview">
+                    <a href="/Admin/Index" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                            Dashboard
+
+                        </p>
+                    </a>
+
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-list"></i>
+                        <p>
+                            Kategori İşlemleri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/Category/Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kategoriler</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Category/AddCategory" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kategori Ekle</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-coffee"></i>
+                        <p>
+                            Ürün İşlemleri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle"></i>
+                                <p>
+                                    Ürünler
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="/Product/Index/" class="nav-link">
+                                        <i class="fa fa-circle nav-icon"></i>
+                                        <p>Hepsi</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                @foreach (var item in Model)
+                                {
+                                    <li class="nav-item">
+                                        <a href="/Product/Index2/@item.CategoryID" class="nav-link">
+                                            <i class="fa fa-circle nav-icon"></i>
+                                            <p>@item.CategoryName</p>
+                                        </a>
+                                    </li>
+                                }
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Product/AddProduct" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Ürün Ekle</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-info-circle"></i>
+                        <p>
+                            Hakkımızda İşlemleri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/About/Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Hakkımızda</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/About/UpdateAbout/1" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Güncelle</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-phone-square"></i>
+                        <p>
+                            İletişim İşlemleri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/ContactAbout/Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>İletişim</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/ContactAbout/UpdateContactAbout/1" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Güncelle</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-envelope"></i>
+                        <p>
+                            Mesaj İşlemleri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/Contact/Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Mesajlar</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-user-circle"></i>
+                        <p>
+                           Yönetici İşlemleri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/Admin/Admins" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Yöneticiler</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Register/Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Yeni Yönetici Kayıt Et</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
+
+
+            </ul>
+
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

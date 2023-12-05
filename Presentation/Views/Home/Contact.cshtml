@@ -1,0 +1,58 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/templatemo_539_simple_house/css/all.min.css" rel="stylesheet" />
+<link href="~/templatemo_539_simple_house/css/templatemo-style.css" rel="stylesheet" />
+
+<main>
+	@await Component.InvokeAsync("_HContactAboutEntryPartial")
+
+	<div class="tm-container-inner-2 tm-contact-section">
+		<div class="row">
+			<div class="col-md-6">
+				@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+				{
+					<div class="form-group">
+						<label for="exampleInputEmail1">Ad</label>
+						@Html.TextBoxFor(x=>x.SenderName,new {@class="form-control"})
+						<i style="color:red">@Html.ValidationMessageFor(x => x.SenderName)</i>
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">Mail</label>
+						@Html.TextBoxFor(x=>x.SenderMail,new {@class="form-control"})
+						<i style="color:red">@Html.ValidationMessageFor(x => x.SenderMail)</i>
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">Mesajınız</label>
+						@Html.TextAreaFor(x=>x.Message,new {@class="form-control"})
+						<i style="color:red">@Html.ValidationMessageFor(x => x.Message)</i>
+					</div>
+
+					<div class="form-group tm-d-flex">
+						<button type="submit" class="tm-btn tm-btn-success tm-btn-right">
+							Gönder
+						</button>
+					</div>
+				}
+			</div>
+
+
+			@await Component.InvokeAsync("_HContactAboutMidPartial")
+		</div>
+	</div>
+
+	<!-- How to change your own map point
+		1. Go to Google Maps
+		2. Click on your location point
+		3. Click "Share" and choose "Embed map" tab
+		4. Copy only URL and paste it within the src="" field below
+	-->
+	@await Component.InvokeAsync("_HContactAboutExistPartial")
+
+</main>
+

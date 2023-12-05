@@ -1,0 +1,47 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common;
+@model IPagedList<EntityLayer.Concrete.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>Ad Soyad</th>
+                    <th>Mail</th>
+                    <th>Tarih</th>
+                    <th>Sil</th>
+                    <th>Oku</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ContactID</td>
+                        <td>@item.SenderName</td>
+                        <td>@item.SenderMail</td>
+                        <td>@item.Date</td>
+
+                        <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn mb-1 btn-rounded btn-danger">Sil</a></td>
+                        <td><a href="/Contact/ReceiveContact/@item.ContactID" class="btn mb-1 btn-rounded btn-primary">Oku</a></td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new {page}), new PagedListRenderOptions { LinkToFirstPageFormat = "<< İlk", LinkToPreviousPageFormat = "< Önceki", LinkToNextPageFormat = "Sonraki >", LinkToLastPageFormat = "Son >>" })
+
+
+
+

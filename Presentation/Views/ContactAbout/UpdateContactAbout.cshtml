@@ -1,0 +1,86 @@
+﻿@model EntityLayer.Concrete.ContactAbout
+@{
+    ViewData["Title"] = "UpdateContactAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-primary">
+    <!-- /.card-header -->
+    <!-- form start -->
+    @using (Html.BeginForm("UpdateContactAbout", "ContactAbout", FormMethod.Post))
+
+    {
+        <div class="card-body">
+            @Html.HiddenFor(x=>x.ContactAboutID)
+            <div class="form-group">
+                <label for="exampleInputEmail1">Başlık</label>
+
+                @Html.TextBoxFor(x=>x.Title,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Title)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Açıklama</label>
+
+                @Html.TextAreaFor(x=>x.Description,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Description)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Adres</label>
+
+                @Html.TextBoxFor(x=>x.Address,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Address)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Google Adres (İframe'in linkini yapıştırınız.)</label>
+
+                @Html.TextBoxFor(x=>x.GoogleAddress,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.GoogleAddress)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Telefon</label>
+
+                @Html.TextBoxFor(x=>x.Phone,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Phone)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Mail</label>
+
+                @Html.TextBoxFor(x=>x.Mail,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Mail)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Sosyal Medya 1</label>
+
+                @Html.TextBoxFor(x=>x.SocialMedia1,new {@class="form-control"})
+
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">SosyalMedya2</label>
+
+                @Html.TextBoxFor(x=>x.SocialMedia2,new {@class="form-control"})
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success">Güncelle</button>
+            <a href="/ContactAbout/Index" class="btn btn-danger">İptal</a>
+        </div>
+    }
+</div>
+
+
+

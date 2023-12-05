@@ -1,0 +1,8 @@
+﻿@model List<EntityLayer.Concrete.ContactAbout>
+@foreach(var item in Model)
+{
+<header class="row tm-welcome-section">
+	<h2 class="col-12 text-center tm-section-title">@item.Title</h2>
+	<p class="col-12 text-center">@item.Description</p>
+</header>
+}

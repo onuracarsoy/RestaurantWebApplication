@@ -1,0 +1,77 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-primary">
+    <!-- /.card-header -->
+    <!-- form start -->
+   @using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    
+    {
+        <div class="card-body">
+            @Html.HiddenFor(x=>x.AboutID)
+            <div class="form-group">
+                <label for="exampleInputEmail1">Giriş Başlığı</label>
+              
+                @Html.TextBoxFor(x=>x.EntryTitle,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.EntryTitle)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Giriş İçeriği</label>
+
+                @Html.TextAreaFor(x=>x.EntryContent,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.EntryContent)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Ana Başlık</label>
+
+                @Html.TextBoxFor(x=>x.Title,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Title)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Ana İçerik</label>
+
+                @Html.TextAreaFor(x=>x.Content,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.Content)</i>
+            </div>
+
+            <div class="form-group">
+                <label>Mevcut Resim : </label> <img src="@ViewBag.Image" style="height:100px; width:200px;"/>
+                <br />
+                <label>Resim</label>
+                  <br/>
+                <input type="file" name="AboutImage" class="form-control" />
+
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.ExistImage)</i>
+
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Bitiş Başlığı</label>
+
+                @Html.TextBoxFor(x=>x.ExistTitle,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.ExistTitle)</i>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Bitiş İçeriği</label>
+
+                @Html.TextAreaFor(x=>x.ExistContent,new {@class="form-control"})
+                <i class="text-danger">@Html.ValidationMessageFor(x => x.ExistContent)</i>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success">Güncelle</button>
+            <a href="/About/Index" class="btn btn-danger">İptal</a>
+        </div>
+    }
+</div>
+
