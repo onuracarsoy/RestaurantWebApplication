@@ -11,7 +11,7 @@
 tüm bilgilerimi kullanarak minumum araştırmayla yaptığım küçük projem.
 
 <h5>Dikkat</h5>
-Çalıştımak için migration işlemi yapmanız gerekmekedir!<br>
+Çalıştımak için migration işlemi yapmanız gerekmeketedir!<br>
 Register işlemi giriş yapılmadan kullanılmamaktadır Controller tarafından Classı [AllowAnonymous] yaparak kayıt açabilirsiniz.
 
 ![r1](https://github.com/onuracarsoy/RestaurantWebApplication/assets/115365153/b47e2966-b7de-4dba-94be-82219015d347)
