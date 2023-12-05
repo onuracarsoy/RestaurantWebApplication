@@ -7,8 +7,8 @@
 -Identity Core<br>
 -Code First (Migration) yaklaşımı<br><br>
 
-4 günlük kısa sürede içerisinde öğrendiğim,<br>
-tüm bilgilerimi kullanarak minumum araştırmayla yaptığım küçük projem.
+Öğrendiğim tüm bilgilerimi kullanarak minumum araştırmayla 4 günlük kısa sürede içerisinde yaptığım küçük projem.
+<br>
 
 <h5>Dikkat</h5>
 Çalıştımak için migration işlemi yapmanız gerekmeketedir!<br>
