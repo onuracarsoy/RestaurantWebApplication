@@ -1,4 +1,4 @@
-Projenin Bileşenleri,
+Projenin Bileşenleri,<br>
 -N katmanlı mimari
 -Repository Design Pattern
 -Dependency Injection 
